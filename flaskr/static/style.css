@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/*  Refers to login/register prompts */
+p {
+    text-align: center;
+}
+
+/* The input box for new todos */
+#enter-new-todo {
+    border-color: transparent;
+    background: transparent;
+}
+
+/* Input text box behaviour on focus */
+#enter-new-todo:focus {
+    outline: none;
+}
+
+/* Flashed error messages */
+#flashes {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Consistent styling across different browsers */
+input::-webkit-input-placeholder {
+    font-size: 15px;
+    color: #3c3c3c;
+    font-style: italic;
+}
+input:-moz-placeholder { /* Firefox 18- */
+    font-size: 15px;
+    color: #3c3c3c;
+    font-style: italic;
+}
+input::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 15px;
+    color: #3c3c3c;
+    font-style: italic;
+}
+input:-ms-input-placeholder {
+    font-size: 15px;
+    color: #3c3c3c;
+    font-style: italic;
+}
+
+/* Button for submitting a new todo */
+#submit-new-todo {
+    border: none;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    padding: 7px 17.5px;
+}
+
+/* Refers to each of the individual todo list items */
+#todo-list div {
+    padding: 3px;
+}
+
+/* Refers to the delete buttons for the todo list */
+#todo-list button {
+    border: none;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    margin-left: 8px;
+    padding: 6px 15px;
+}
+
+/* Refers to the entire form for adding a todo (text box and submit button) */
+#todo-form {
+    text-align: center;
+}
+
+/* Refers to the main headers for each page */
+h1 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Refers to todo list div as a whole */
+#todo-list {
+    margin: auto;
+    width: 80%;
+    margin-top: 30px;
+}
+
+/* Refers to both the registration and login forms */
+#registration-form, #login-form {
+    text-align: center;
+}
+
+/* Refers to the username and password fields on the register/login pages */
+#username, #password {
+    border: none;
+    background: transparent;
+}
+
+/* Username and password field behaviour on focus */
+#username, #password:focus {
+    outline: none;
+}

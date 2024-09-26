@@ -1,0 +1,8 @@
+*.pyc
+__pycache__/
+
+instance/
+
+rethinkdb_data/
+
+.DS_Store

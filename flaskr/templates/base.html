@@ -1,0 +1,20 @@
+<!-- Home page / page that displays todos (once you are logged in). -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script>const getTodosUrl = "{{ url_for('todos_bp.get_todos') }}";</script>
+        <script>const newTodoUrl = "{{ url_for('todos_bp.new_todo') }}";</script>
+        <script src="{{ url_for('static', filename='todo.js') }}" defer></script>
+    </head>
+    <body>
+        <h1>Todos</h1>
+        <form id="todo-form">
+            <input id="enter-new-todo" type="text" name="title" placeholder="What's on your mind?" required>
+            <input id="submit-new-todo" type="submit" value="Add todo">
+        </form>
+        <div id="todo-list"></div>
+        <p>Click here to <a href="{{ url_for('auth.logout') }}">logout.</a></p>
+    </body>
+</html>

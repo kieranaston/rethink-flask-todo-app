@@ -1,0 +1,12 @@
+<!-- Login page. -->
+{% extends "layout.html" %}
+{% block title %}Todos - Login{% endblock %}
+{% block body %}
+    <h1>Login</h1>
+    <form id="registration-form" method="POST" action="{{ url_for('auth.login') }}">
+        <input id="username" type="text" name="username" placeholder="Username" required>
+        <input id="password" type="password" name="password" placeholder="Password" required>
+        <input id="submit-button" type="submit" value="Login">
+    </form>
+    <p>Would you like to <a href="{{ url_for('auth.register') }}">create an account?</a></p>
+{% endblock %}
