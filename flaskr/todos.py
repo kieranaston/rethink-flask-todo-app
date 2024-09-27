@@ -56,7 +56,6 @@ def patch_todo(todo_id):
 def delete_todo(todo_id):
     conn = g.get_conn()
     user_id = session['user_id']
-    #return jsonify(r.db('todolist').table('todos').get(todo_id).delete().run(conn))
     result = r.db('todolist').table('todos').filter((r.row['user_id'] == user_id) & (r.row['id'] == todo_id)).delete().run(conn)
     return jsonify(result)
 
