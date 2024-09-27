@@ -28,7 +28,8 @@ def new_todo():
     user_id = session['user_id']
     new_todo = {'title': request.json.get('title'),
                 'completed': False,
-                'user_id': user_id}
+                'user_id': user_id,
+                'created_at': request.json.get('created_at')}
     inserted = r.db('todolist').table('todos').insert(new_todo).run(conn)
     return jsonify(id=inserted['generated_keys'][0])
 
