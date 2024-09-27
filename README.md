@@ -95,11 +95,11 @@ I worked on this project with the goal of familiarizing myself with Flask and Re
 
 One thing I found when looking at small todo list projects was that often modularity was not a big focus. This makes a lot of sense, since most of the time these projects are so small that it makes more sense to adopt a more basic file structure. After going over a number of demo Flask web apps it seemed to me that the most effective way to achieve some degree of modularity while maintaining a simple file structure was with Flask blueprints.
 
-[This](https://realpython.com/flask-blueprint/) article outlines a completely modular setup with blueprints. When considering the scale of my project and the components I wanted to include I found it would be better to implement blueprints with a more simple file structure that could be made more modular if needed. I ended up adopting the project layout detailed [here](https://flask.palletsprojects.com/en/2.3.x/tutorial/layout/), leaving the files for database logic, logic related to the todos, and logic related to user authentication in the root project folder `todo-app/flaskr/`, and using separate folders for different pages within my `todo-app/flaskr/templates/` directory.
+[This](https://realpython.com/flask-blueprint/)[^4] article outlines a completely modular setup with blueprints. When considering the scale of my project and the components I wanted to include I found it would be better to implement blueprints with a more simple file structure that could be made more modular if needed. I ended up adopting the project layout detailed [here](https://flask.palletsprojects.com/en/2.3.x/tutorial/layout/)[^6], leaving the files for database logic, logic related to the todos, and logic related to user authentication in the root project folder `todo-app/flaskr/`, and using separate folders for different pages within my `todo-app/flaskr/templates/` directory.
 
 ### Managing database connections
 
-To manage database connections I followed [this](https://fjebaker.github.io/notes/python/flask/rethink-db-with-flask.html) instantiation of RethinkDB with Flask. It ensures that only one database connection is active at all times by checking for a connection at the beginning of a request and only establishing one if needed. It does this by assigning custom functions to Flask's `app.before_request()` and `app.teardown_appcontext()`.
+To manage database connections I followed [this](https://fjebaker.github.io/notes/python/flask/rethink-db-with-flask.html)[^2] instantiation of RethinkDB with Flask. It ensures that only one database connection is active at all times by checking for a connection at the beginning of a request and only establishing one if needed. It does this by assigning custom functions to Flask's `app.before_request()` and `app.teardown_appcontext()`.
 
 With this a connection can be accessed anywhere in my project with `g.get_conn`.
 
@@ -107,7 +107,7 @@ One thing I added to the database management was a database initialization funct
 
 ### Initializing the app and connecting to the database
 
-I made use of the application factory [here](https://flask.palletsprojects.com/en/2.3.x/tutorial/factory/) in `todo-app/flaskr/__init__.py`, which initializes the Flask app with a config if specified and registers blueprints for managing the database, user authentication, and interacting with todos.
+I made use of the application factory [here](https://flask.palletsprojects.com/en/2.3.x/tutorial/factory/)[^1] in `todo-app/flaskr/__init__.py`, which initializes the Flask app with a config if specified and registers blueprints for managing the database, user authentication, and interacting with todos.
 
 ### Views & Routes
 
@@ -115,7 +115,7 @@ To construct the views and routes for my web app I started with the basic functi
 
 They have query with user information so that users can only interact with their own todos.
 
-[This portion](https://flask.palletsprojects.com/en/2.3.x/tutorial/views/) of a Flask demo app was used as a reference for my user authentication views. When a user registers, their username is checked against the database to avoid duplicates. When a user is logged in their user id, the primary key for the user table, ir stored in the session and used in any further requests for the remainder of the session.
+[This portion](https://flask.palletsprojects.com/en/2.3.x/tutorial/views/)[^3] of a Flask demo app was used as a reference for my user authentication views. When a user registers, their username is checked against the database to avoid duplicates. When a user is logged in their user id, the primary key for the user table, ir stored in the session and used in any further requests for the remainder of the session.
 
 All of the views that involve interaction with todos have been made to require a user login, so a user must be logged in before being redirected to the main page of the web application.
 
@@ -136,7 +136,7 @@ In the future I would like to add unit testing to this project, as well as some 
 
 I would also like to add displayed timestamps for the todos to the page.
 
-[^1]: Baker, F. (2021). Using RethinkDB with Flask. notes. https://fjebaker.github.io/notes/python/flask/rethink-db-with-flask.html
+[^1]: Application setup. Application Setup - Flask Documentation (2.3.x). (2010). https://flask.palletsprojects.com/en/2.3.x/tutorial/factory/
 [^2]: Baker, F. (2021). Using RethinkDB with Flask. notes. https://fjebaker.github.io/notes/python/flask/rethink-db-with-flask.html
 [^3]: Blueprints and views. Blueprints and Views - Flask Documentation (2.3.x). (2010). https://flask.palletsprojects.com/en/2.3.x/tutorial/views/
 [^4]: Garcia, M. (2021, February 6). Use a flask blueprint to architect your applications. Real Python. https://realpython.com/flask-blueprint/
