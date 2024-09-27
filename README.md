@@ -23,7 +23,11 @@ A simple todo list with the following features:
 
 Firs you can navigate to this page to install RethinkDB to your system. Then, you can install the RethinkDB Python drivers globally or within your virtual environment using `sudo pip install rethinkdb`.
 
-To make sure it is working, run the command `rethinkdb`. If you then go to: http://localhost:8080/ you should see the dashboard for RethinkDB. To test the Python drivers run the following commands:
+To make sure it is working, run the command `rethinkdb`. If you then go to: http://localhost:8080/ you should see the dashboard for RethinkDB.
+
+<img src="images/adminpage.png" alt="Unable to load image.">
+
+To test the Python drivers run the following commands:
 ```
 $ python
 >>> from rethinkdb import RethinkDB
@@ -33,6 +37,21 @@ $ python
 
 What you get back should be similar to `<rethinkdb.net.DefaultConnection object at 0x100f6cc80>` if everything is working properly.
 
+Install the packages from the requirements file.
+
+Navigate the the directory containing the project folder `flaskr`, and run the following command: `flask --app flaskr init-db`.
+
+This should initialize your RethinkDB database.
+
+Then, you should be good to run the app: `flask --app flaskr run` or `flask --app flaskr run --debug` if you are going to be making changes. You should see something similar to the following:
+
+```
+ * Serving Flask app 'flaskr'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+```
 
 
 ## How to navigate this project
@@ -90,6 +109,7 @@ This way, the only time todos are retrieved from the database is when the page i
 
 ## If I had more time what would I change
 
+In the future I would like to add unit testing to this project, as well as some more advanced features such as subtasks and reminders/forcing users to complete their tasks.
 
 [^1]: Baker, F. (2021). Using RethinkDB with Flask. notes. https://fjebaker.github.io/notes/python/flask/rethink-db-with-flask.html
 [^2]: Baker, F. (2021). Using RethinkDB with Flask. notes. https://fjebaker.github.io/notes/python/flask/rethink-db-with-flask.html
