@@ -82,7 +82,7 @@ h1 {
 /* Refers to todo list div as a whole */
 #todo-list {
     margin: auto;
-    width: 80%;
+    width: 50%;
     margin-top: 30px;
 }
 

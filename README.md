@@ -8,6 +8,8 @@ A simple todo list with the following features:
 * Deleting todos
 * Marking todos as complete/incomplete
 
+![Unable to load GIF](https://github.com/kieranaston/rethink-flask-todo-app/blob/main/images/democlip.gif)
+
 ## Table of Contents
 - [How to install/use](#how-to-installuse)
 - [How to navigate this project](#how-to-navigate-this-project)
@@ -131,6 +133,8 @@ This way, the only time todos are retrieved from the database is when the page i
 ## If I had more time what would I change
 
 In the future I would like to add unit testing to this project, as well as some more advanced features such as subtasks and reminders/forcing users to complete their tasks.
+
+I would also like to add displayed timestamps for the todos to the page.
 
 [^1]: Baker, F. (2021). Using RethinkDB with Flask. notes. https://fjebaker.github.io/notes/python/flask/rethink-db-with-flask.html
 [^2]: Baker, F. (2021). Using RethinkDB with Flask. notes. https://fjebaker.github.io/notes/python/flask/rethink-db-with-flask.html
