@@ -111,7 +111,7 @@ I made use of the application factory [here](https://flask.palletsprojects.com/e
 
 ### Views & Routes
 
-To construct the views and routes for my web app I started with the basic functionalities and added things like user authentication later on. I based my views for interacting with todos on the ones included in [this demo todo app](https://github.com/rethinkdb/rethinkdb-example-flask-backbone-todo). Sorting was added into the view that retrieves todos so that the most recently added todos would appear at the top of the list and completed todos would appear at the bottom of the list.
+To construct the views and routes for my web app I started with the basic functionalities and added things like user authentication later on. I based my views for interacting with todos on the ones included in [this demo todo app](https://github.com/rethinkdb/rethinkdb-example-flask-backbone-todo)[^5]. Sorting was added into the view that retrieves todos so that the most recently added todos would appear at the top of the list and completed todos would appear at the bottom of the list.
 
 They have query with user information so that users can only interact with their own todos.
 
