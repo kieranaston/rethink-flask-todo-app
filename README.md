@@ -58,6 +58,27 @@ Press CTRL+C to quit
 
 Within `flaskr/` are the app factory `__init__.py`, the database management functions `db.py`, as well as the todo and user authentication logic `todos.py` and `auth.py`, respectively. `flaskr/static/` includes static files such as the styling `style.css` and supporting JavaScript `todo.js`. `flaskr/templates/` includes the HTML files with `layout.html` being a template for flashing error messages, `base.html` being the main page, and `flaskr/templates/auth` including the login and register pages.
 
+THe file structure:
+
+```
+├── README.md
+├── flaskr
+│   ├── __init__.py
+│   ├── auth.py
+│   ├── db.py
+│   ├── static
+│   │   ├── style.css
+│   │   └── todo.js
+│   ├── templates
+│   │   ├── auth
+│   │   │   ├── login.html
+│   │   │   └── register.html
+│   │   ├── base.html
+│   │   └── layout.html
+│   └── todos.py
+└── requirements.txt
+```
+
 ## How I worked on this project
 
 I worked on this project with the goal of familiarizing myself with Flask and RethinkDB, as well as getting some more experience with frontend work. I referenced various articles, documentation, and demo projects to get an idea of how I wanted to structure my web app and what features I wanted it to have. To establish my workflow I began by asking myself a number of important questions:
