@@ -23,7 +23,7 @@ A simple todo list with the following features:
 
 ## How to install/use
 
-First you can navigate to this page to install RethinkDB to your system. Then, you can install the RethinkDB Python drivers globally or within your virtual environment using `sudo pip install rethinkdb`.
+First you can navigate to [this](https://rethinkdb.com/docs/install/) page to install RethinkDB to your system. Then, you can install the RethinkDB Python drivers globally or within your virtual environment using `sudo pip install rethinkdb`.
 
 To make sure it is working, run the command `rethinkdb`. If you then go to: http://localhost:8080/ you should see the dashboard for RethinkDB.
 
