@@ -130,7 +130,7 @@ To solve this problem and limit the number of requests as much as possible, the 
 
 This way, the only time todos are retrieved from the database is when the page is refreshed. Adding, deleting, and toggling todos is dynamically rendered on the page.
 
-## If I had more time what would I change
+## If I had more time what would I change?
 
 In the future I would like to add unit testing to this project, as well as some more advanced features such as subtasks and reminders/forcing users to complete their tasks.
 
