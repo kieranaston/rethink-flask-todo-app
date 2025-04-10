@@ -14,6 +14,7 @@ A simple todo list with the following features:
   - [How to install/use](#how-to-installuse)
   - [How to navigate this project](#how-to-navigate-this-project)
   - [Things I would like to add in the future](#things-i-would-like-to-add-in-the-future)
+  - [References](#references)
 
 ## How to install/use
 
@@ -31,7 +32,7 @@ $ python
 
 What you get back should be similar to `<rethinkdb.net.DefaultConnection object at 0x100f6cc80>` if everything is working properly.
 
-Install the packages from the requirements file.
+Install the packages from the requirements file: `pip install -r requirements.txt`
 
 Navigate the the directory containing the project folder `flaskr`, and run the following command: `flask --app flaskr init-db`.
 
@@ -47,7 +48,6 @@ WARNING: This is a development server. Do not use it in a production deployment.
 Press CTRL+C to quit
 ```
 
-
 ## How to navigate this project
 
 Within `flaskr/` are the app factory `__init__.py`, the database management functions `db.py`, as well as the todo and user authentication logic `todos.py` and `auth.py`, respectively. `flaskr/static/` includes static files such as the styling `style.css` and supporting JavaScript `todo.js`. `flaskr/templates/` includes the HTML files with `layout.html` being a template for flashing error messages, `base.html` being the main page, and `flaskr/templates/auth` including the login and register pages.
@@ -55,11 +55,7 @@ Within `flaskr/` are the app factory `__init__.py`, the database management func
 THe file structure:
 
 ```
-├── README.md
 ├── flaskr
-│   ├── __init__.py
-│   ├── auth.py
-│   ├── db.py
 │   ├── static
 │   │   ├── style.css
 │   │   └── todo.js
@@ -69,7 +65,11 @@ THe file structure:
 │   │   │   └── register.html
 │   │   ├── base.html
 │   │   └── layout.html
+│   ├── __init__.py
+│   ├── auth.py
+│   ├── db.py
 │   └── todos.py
+├── README.md
 └── requirements.txt
 ```
 
@@ -79,9 +79,11 @@ In the future I would like to add unit testing to this project, as well as some 
 
 I would also like to add displayed timestamps for the todos to the page.
 
-[^1]: Application setup. Application Setup - Flask Documentation (2.3.x). (2010). https://flask.palletsprojects.com/en/2.3.x/tutorial/factory/
-[^2]: Baker, F. (2021). Using RethinkDB with Flask. notes. https://fjebaker.github.io/notes/python/flask/rethink-db-with-flask.html
-[^3]: Blueprints and views. Blueprints and Views - Flask Documentation (2.3.x). (2010). https://flask.palletsprojects.com/en/2.3.x/tutorial/views/
-[^4]: Garcia, M. (2021, February 6). Use a flask blueprint to architect your applications. Real Python. https://realpython.com/flask-blueprint/
-[^5]: neumino, mglukhovsky, coffeemug, danielmewes. (2021). rethinkdb-example-flask-backbone-todo. GitHub. https://github.com/rethinkdb/rethinkdb-example-flask-backbone-todo
-[^6]: Project layout. Project Layout - Flask Documentation (2.3.x). (2010). https://flask.palletsprojects.com/en/2.3.x/tutorial/layout/
+## References
+
+1. [Application Setup - Flask Documentation (2.3.x)](https://flask.palletsprojects.com/en/2.3.x/tutorial/factory/)
+2. [Using RethinkDB with Flask](https://fjebaker.github.io/notes/python/flask/rethink-db-with-flask.html)
+3. [Blueprints and Views - Flask Documentation](https://flask.palletsprojects.com/en/2.3.x/tutorial/views/)
+4. [Use a Flask Blueprint to Architect Your Applications](https://realpython.com/flask-blueprint/)
+5. [RethinkDB Example Flask Backbone Todo](https://github.com/rethinkdb/rethinkdb-example-flask-backbone-todo)
+6. [Project Layout - Flask Documentation](https://flask.palletsprojects.com/en/2.3.x/tutorial/layout/)
